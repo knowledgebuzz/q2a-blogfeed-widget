@@ -1,9 +1,12 @@
 # Blog Feed Widget for Question2Answer
 
-A powerful and lightweight blog feed widget for Question2Answer (Q2A) that allows you to display the latest posts from any WordPress website directly inside your Q2A community.
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)
+![Q2A Version](https://img.shields.io/badge/Q2A-1.8%2B-orange)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
-Developed by **Davis Wanyonyi**  
-Author Website: https://unitedafrica.digital  
+A powerful and lightweight blog feed widget for Question2Answer (Q2A) that allows you to display the latest posts from any WordPress website directly inside your Q2A community.
 
 ---
 
@@ -26,8 +29,9 @@ Author Website: https://unitedafrica.digital
 
 ## 📦 Installation
 
-1. Download or clone this repository.
-2. Upload the folder:
+1. Download the latest release from the Releases section.
+2. Extract the ZIP file.
+3. Upload the folder:
 
    ```
    qa-blogfeed-widget
@@ -39,8 +43,8 @@ Author Website: https://unitedafrica.digital
    /qa-plugin/
    ```
 
-3. Go to your Q2A **Admin Panel → Plugins**
-4. Activate **Blog Feed Widget**
+4. Go to your Q2A **Admin Panel → Plugins**
+5. Activate **Blog Feed Widget**
 
 ---
 
@@ -59,7 +63,7 @@ After activating the plugin:
    (Do NOT add `/feed` — it is added automatically.)
 
 3. Configure your options:
-   - Number of latest posts to display
+   - Number of latest posts
    - Excerpt length
    - Enable/Disable "Read More" button
    - Enable/Disable "Read All" button
@@ -71,35 +75,31 @@ After activating the plugin:
 
 ## 📍 Displaying the Widget
 
-After configuring the settings:
+After configuring:
 
 1. Go to **Admin → Layout**
 2. Locate **Blog Feed Widget**
-3. Select the position where you want it to appear:
-   - Main
-   - Side
-   - Top
-   - Bottom
-   - or any available layout area
-4. Save your layout settings
+3. Select the position where you want it to appear
+4. Save layout changes
 
-The widget will now appear in the selected location on your site frontend.
+The widget will now appear in your selected location on the frontend.
 
-> 💡 If it does not appear immediately, clear your cache and refresh the page.
+> If it does not appear immediately, clear your cache and refresh the page.
 
 ---
 
-## 🎨 Color Mode Information
+## 🎨 Color Modes
 
 - **Auto Mode** follows the visitor’s device theme (light/dark).
-- **Force Light Mode** ensures a consistent white background with visible text, regardless of device settings.
+- **Force Light Mode** ensures a consistent white background with readable text regardless of device settings.
 
 ---
 
 ## 🌍 Compatibility
 
-- Tested with standard WordPress RSS feeds
-- Compatible with most Question2Answer themes
+- Works with Question2Answer 1.8+
+- Compatible with most Q2A themes
+- Works with any standard WordPress RSS feed
 - No WordPress plugin required
 - No API keys required
 
@@ -111,18 +111,19 @@ If you find this plugin useful and would like to support its development:
 
 👉 https://unitedafrica.digital/donate
 
-Your support helps maintain and improve open-source tools for digital communities.
+Your support helps maintain and improve open-source tools.
 
 ---
 
 ## 👨‍💻 Author
 
-**Davis Wanyonyi**  
-Founder, United Africa Digital  
-https://unitedafrica.digital  
+Made with ❤️ in **United Africa Digital**
+
+Developed by  
+**[Davis Simiyu Wanyonyi](https://unitedafrica.digital/davis)**  
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
