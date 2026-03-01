@@ -12,107 +12,111 @@ class qa_blogfeed_widget {
         return true;
     }
 
-    /* ==============================
-       ADMIN SETTINGS
-    ============================== */
-    function admin_form(&$qa_content)
-    {
-        $saved = false;
+/* ==============================
+   ADMIN SETTINGS
+============================== */
+function admin_form(&$qa_content)
+{
+    $saved = false;
 
-        if (qa_clicked('blogfeed_save')) {
+    if (qa_clicked('blogfeed_save')) {
 
-            qa_opt('blogfeed_title', qa_post_text('blogfeed_title'));
-            qa_opt('blogfeed_blog_url', rtrim(qa_post_text('blogfeed_blog_url'), '/'));
-            qa_opt('blogfeed_count', (int)qa_post_text('blogfeed_count'));
-            qa_opt('blogfeed_show_date', (int)qa_post_text('blogfeed_show_date'));
-            qa_opt('blogfeed_show_excerpt', (int)qa_post_text('blogfeed_show_excerpt'));
-            qa_opt('blogfeed_excerpt_length', (int)qa_post_text('blogfeed_excerpt_length'));
-            qa_opt('blogfeed_show_readmore', (int)qa_post_text('blogfeed_show_readmore'));
-            qa_opt('blogfeed_show_readall', (int)qa_post_text('blogfeed_show_readall'));
-            qa_opt('blogfeed_color_mode', qa_post_text('blogfeed_color_mode'));
+        qa_opt('blogfeed_title', qa_post_text('blogfeed_title'));
+        qa_opt('blogfeed_blog_url', rtrim(qa_post_text('blogfeed_blog_url'), '/'));
+        qa_opt('blogfeed_count', (int)qa_post_text('blogfeed_count'));
+        qa_opt('blogfeed_show_date', (int)qa_post_text('blogfeed_show_date'));
+        qa_opt('blogfeed_show_excerpt', (int)qa_post_text('blogfeed_show_excerpt'));
+        qa_opt('blogfeed_excerpt_length', (int)qa_post_text('blogfeed_excerpt_length'));
+        qa_opt('blogfeed_show_readmore', (int)qa_post_text('blogfeed_show_readmore'));
+        qa_opt('blogfeed_show_readall', (int)qa_post_text('blogfeed_show_readall'));
+        qa_opt('blogfeed_color_mode', qa_post_text('blogfeed_color_mode'));
 
-            $saved = true;
-        }
-
-        return array(
-            'ok' => $saved ? 'Blog Feed settings saved successfully.' : null,
-
-            'fields' => array(
-
-                array(
-                    'label' => 'Widget Title',
-                    'value' => qa_opt('blogfeed_title') ?: 'Latest Blog Posts',
-                    'tags'  => 'name="blogfeed_title"',
-                ),
-
-                array(
-                    'label' => 'WordPress Blog URL',
-                    'value' => qa_opt('blogfeed_blog_url'),
-                    'tags'  => 'name="blogfeed_blog_url" placeholder="https://example.com/blog"',
-                ),
-
-                array(
-                    'label' => 'Number of Posts',
-                    'type'  => 'number',
-                    'value' => qa_opt('blogfeed_count') ?: 5,
-                    'tags'  => 'name="blogfeed_count"',
-                ),
-
-                array(
-                    'label' => 'Show Date',
-                    'type'  => 'checkbox',
-                    'value' => qa_opt('blogfeed_show_date'),
-                    'tags'  => 'name="blogfeed_show_date"',
-                ),
-
-                array(
-                    'label' => 'Show Excerpt',
-                    'type'  => 'checkbox',
-                    'value' => qa_opt('blogfeed_show_excerpt'),
-                    'tags'  => 'name="blogfeed_show_excerpt"',
-                ),
-
-                array(
-                    'label' => 'Excerpt Length (characters)',
-                    'type'  => 'number',
-                    'value' => qa_opt('blogfeed_excerpt_length') ?: 120,
-                    'tags'  => 'name="blogfeed_excerpt_length"',
-                ),
-
-                array(
-                    'label' => 'Enable Read More Button',
-                    'type'  => 'checkbox',
-                    'value' => qa_opt('blogfeed_show_readmore'),
-                    'tags'  => 'name="blogfeed_show_readmore"',
-                ),
-
-                array(
-                    'label' => 'Enable Read All Button',
-                    'type'  => 'checkbox',
-                    'value' => qa_opt('blogfeed_show_readall'),
-                    'tags'  => 'name="blogfeed_show_readall"',
-                ),
-
-                array(
-                    'label' => 'Color Mode',
-                    'type'  => 'select',
-                    'value' => qa_opt('blogfeed_color_mode') ?: 'auto',
-                    'tags'  => 'name="blogfeed_color_mode"',
-                    'options' => array(
-                        'auto'  => 'Auto (Follow Device)',
-                        'light' => 'Force Light Mode',
-                    ),
-                ),
-            ),
-
-            'buttons' => array(
-                array(
-                    'label' => 'Save Changes',
-                    'tags'  => 'name="blogfeed_save"',
-                ),
-            ),
-        );
+        $saved = true;
     }
+
+    return array(
+        'ok' => $saved ? 'Blog Feed settings saved successfully.' : null,
+
+        'fields' => array(
+
+            array(
+                'label' => 'Widget Title',
+                'value' => qa_opt('blogfeed_title') ?: 'Latest Blog Posts',
+                'tags'  => 'name="blogfeed_title"',
+            ),
+
+            array(
+                'label' => 'WordPress Blog URL',
+                'value' => qa_opt('blogfeed_blog_url'),
+                'tags'  => 'name="blogfeed_blog_url" placeholder="https://example.com/blog"',
+            ),
+
+            array(
+                'label' => 'Number of Posts',
+                'type'  => 'number',
+                'value' => qa_opt('blogfeed_count') ?: 5,
+                'tags'  => 'name="blogfeed_count" min="1" max="20"',
+            ),
+
+            array(
+                'label' => 'Show Date',
+                'type'  => 'checkbox',
+                'value' => qa_opt('blogfeed_show_date'),
+                'tags'  => 'name="blogfeed_show_date"',
+            ),
+
+            array(
+                'label' => 'Show Excerpt',
+                'type'  => 'checkbox',
+                'value' => qa_opt('blogfeed_show_excerpt'),
+                'tags'  => 'name="blogfeed_show_excerpt"',
+            ),
+
+            array(
+                'label' => 'Excerpt Length (characters)',
+                'type'  => 'number',
+                'value' => qa_opt('blogfeed_excerpt_length') ?: 120,
+                'tags'  => 'name="blogfeed_excerpt_length" min="50" max="500"',
+            ),
+
+            array(
+                'label' => 'Enable Read More Button',
+                'type'  => 'checkbox',
+                'value' => qa_opt('blogfeed_show_readmore'),
+                'tags'  => 'name="blogfeed_show_readmore"',
+            ),
+
+            array(
+                'label' => 'Enable Read All Button',
+                'type'  => 'checkbox',
+                'value' => qa_opt('blogfeed_show_readall'),
+                'tags'  => 'name="blogfeed_show_readall"',
+            ),
+
+            array(
+                'label' => 'Color Mode',
+                'type'  => 'select',
+                'value' => qa_opt('blogfeed_color_mode') ?: 'auto',
+                'tags'  => 'name="blogfeed_color_mode"',
+                'options' => array(
+                    'auto'  => 'Auto (Follow Device)',
+                    'light' => 'Force Light Mode',
+                ),
+            ),
+        ),
+
+        'buttons' => array(
+            array(
+                'label' => 'Save Changes',
+                'tags'  => 'name="blogfeed_save"',
+            ),
+            array(
+                'label' => 'Donate ❤️',
+                'tags'  => 'onclick="window.open(\'https://unitedafrica.digital/donate\', \'_blank\'); return false;" class="qa-form-light-button"',
+            ),
+        ),
+    );
+}
 
     /* ==============================
        FETCH WORDPRESS POSTS
