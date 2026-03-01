@@ -3,7 +3,7 @@
 Plugin Name: Q2A Blog Feed Widget
 Plugin URI: https://github.com/knowledgebuzz/q2a-blogfeed-widget
 Plugin Description: Displays latest WordPress blog posts in Q2A sidebar with caching and admin controls.
-Plugin Version: 2.0
+Plugin Version: 1.0.0
 Plugin Date: 2026-03-01
 Plugin Author: Davis Simiyu Wanyonyi 
 Plugin License: GPLv2
