@@ -1,0 +1,136 @@
+/* =====================================================
+   Q2A BLOG FEED WIDGET – STRONG ISOLATED STYLING
+   Fully Scoped | Theme-Independent | Layout Safe
+===================================================== */
+
+.qa-blog-widget,
+.qa-blog-widget * {
+    box-sizing: border-box;
+}
+
+/* MAIN CONTAINER */
+.qa-blog-widget {
+    display: block;
+    width: 100%;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 18px !important;
+    margin-bottom: 24px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+    clear: both !important;
+    overflow: hidden !important;
+}
+
+/* HEADER */
+.qa-blog-widget .qa-blog-header {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #f1f1f1 !important;
+    color: #111827 !important;
+}
+
+/* POST WRAPPER */
+.qa-blog-widget .qa-blog-post {
+    display: block !important;
+    margin-bottom: 18px !important;
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+}
+
+.qa-blog-widget .qa-blog-post:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* TITLE */
+.qa-blog-widget .qa-blog-title {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    color: #1f2937 !important;
+    text-decoration: none !important;
+    margin-bottom: 6px !important;
+}
+
+.qa-blog-widget .qa-blog-title:hover {
+    color: #2563eb !important;
+}
+
+/* DATE */
+.qa-blog-widget .qa-blog-date {
+    font-size: 11px !important;
+    color: #6b7280 !important;
+    margin-bottom: 6px !important;
+}
+
+/* EXCERPT */
+.qa-blog-widget .qa-blog-excerpt {
+    font-size: 13px !important;
+    color: #374151 !important;
+    line-height: 1.6 !important;
+}
+
+/* BUTTON BASE */
+.qa-blog-widget .qa-blog-button {
+    display: inline-block !important;
+    margin-top: 10px !important;
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.qa-blog-widget .qa-blog-button:hover {
+    background: #1d4ed8 !important;
+    transform: translateY(-1px);
+}
+
+/* READ ALL SECTION */
+.qa-blog-widget .qa-blog-readall {
+    margin-top: 20px !important;
+    text-align: center !important;
+}
+
+.qa-blog-widget .qa-blog-button-full {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* PREVENT THEME INTERFERENCE */
+.qa-blog-widget a {
+    text-decoration: none !important;
+}
+
+.qa-blog-widget p {
+    margin: 0 !important;
+}
+
+/* DARK MODE SAFE (Optional Auto Detection) */
+@media (prefers-color-scheme: dark) {
+    .qa-blog-widget {
+        background: #1f2937 !important;
+        border-color: #374151 !important;
+    }
+
+    .qa-blog-widget .qa-blog-header,
+    .qa-blog-widget .qa-blog-title {
+        color: #f9fafb !important;
+    }
+
+    .qa-blog-widget .qa-blog-date {
+        color: #9ca3af !important;
+    }
+
+    .qa-blog-widget .qa-blog-excerpt {
+        color: #d1d5db !important;
+    }
+}
